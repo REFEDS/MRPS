@@ -102,7 +102,7 @@ http-scheme and https-scheme URIs used for entityID values MUST contain a host p
 
 #### Entity Validation
 
-On entity registration, the Federation Operator SHALL carry out entity vaildations checks. These checks include:
+On entity registration, the Federation Operator SHALL carry out entity validation checks. These checks include:
 
 •	Ensuring all required information is present in the metadata;
 •	Ensuring metadata is correctly formatted;
