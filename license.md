@@ -1,0 +1,1 @@
+This template document is license under Creative Commons CC BY 3.0. You are free to share, re-use and adapt this template as long as attribution is given.  This document draws on work carried out by the UK Access Management Federation and the ACOnet Identity Federation with gratitude. 
