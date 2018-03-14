@@ -113,7 +113,7 @@ The Federation Operator SHALL verify the member’s right to use particular doma
 
 The right to use a domain name SHALL be established in one of the following ways:
 
-* A member’s canonical name matches registrant information shown in DNS.
+* A member’s canonical name matches registrant information shown in WHOIS.
 * A member MAY be granted the right to make use of a specific domain name through a permission letter from the domain owner on a per-entity basis. Permission SHALL NOT be regarded as including permission for the use of sub-domains.
 
 #### 5.2 EntityID Format
