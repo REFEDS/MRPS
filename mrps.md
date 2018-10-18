@@ -5,7 +5,7 @@
 | Version           | 1.0                        |
 | ----------------- | -------------------------- |
 | **Authors**       | **_Enter your name here_** |
-| **Last Modified** | 2018-10-17                 |
+| **Last Modified** | 2018-01-16                 |
 
 
 **Acknowledgements**
@@ -36,7 +36,7 @@ The following definitions are used in this document:
 | Federation                 | Identity Federation. An association of organisations that come together to securely exchange information as appropriate about their users and resources to enable collaborations and transactions.  |
 | Federation Member          | An organisation that has joined the Federation by agreeing to be bound by the Federation Policy in writing.  |
 | Federation Operator        | Organisation providing the infrastructure for Authentication and Authorisation to Federation Members.|
-| Federation Policy          | A document describing the obligations, rights and expectations of the federation members and the federation Operator. |
+| Federation Policy          | A document describing the obligations, rights and expectations of the federation members and the Federation Operator. |
 | Entity                     | A discrete component that a member wishes to register and describe in metadata.  This is typically an Identity Provider or Service Provider. |
 | Registry                   | System used by the Federation Operator to register entity metadata. This may be via a self-service tool or via other manual processes. |
 | Registered Representatives | Individuals authorised to act on behalf of the member.  These may take on different roles with different rights attached to them. |
@@ -126,7 +126,7 @@ http-scheme and https-scheme URIs used for entityID values MUST contain a host p
 
 #### 5.3 Scope Format
 
-For Identity Provider entities, scopes MUST be named by DNS domain names, expressed in lowercase. Multiple scopes are allowed. Regular expressions representing multiple scopes can be used, but all DNS domains covered by the expression MUST be included in checks by the federation operator for the member's right to use those domains. The regular expression(s) MUST be fully anchored at the beginning and end (e.g. `^(foo|bar)\.example\.com$`).
+For Identity Provider entities, scopes MUST be named by DNS domain names, expressed in lowercase. Multiple scopes are allowed. Regular expressions representing multiple scopes can be used, but all DNS domains covered by the expression MUST be included in checks by the Federation Operator for the member's right to use those domains. The regular expression(s) MUST be fully anchored at the beginning and end (e.g. `^(foo|bar)\.example\.com$`).
 
 #### 5.4 Entity Validation
 
