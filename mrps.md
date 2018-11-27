@@ -126,7 +126,9 @@ http-scheme and https-scheme URIs used for entityID values MUST contain a host p
 
 #### 5.3 Scope Format
 
-For Identity Provider entities, scopes MUST be rooted in the DNS domain name space, expressed in lowercase. Multiple scopes are allowed. Regular expressions representing multiple scopes can be used, but all DNS domains covered by the expression MUST be included in checks by the Federation Operator for the member's right to use those domains. The regular expression(s) MUST be fully anchored at the beginning and end (e.g. `^(foo|bar)\.example\.com$`).
+For Identity Provider entities, scopes MUST be rooted in the DNS domain name space, expressed in lowercase. Multiple scopes are allowed.
+
+Regular expressions representing multiple scopes can be used, but all DNS domains covered by the expression MUST be included in checks by the Federation Operator for the member's right to use those domains. For these checks to be achievable by the Federation Operator, the set of DNS domains covered by the regular expression must end with a public suffix - that is, a literal ‘.’, followed by at least two DNS labels separated by literal '.’s (representing a domain to be validated as "owned" by the entity owner), and ending with a '$’ anchor. The regular expression(s) MUST be fully anchored at the beginning and end. (e.g. `^(foo|bar)\.example\.com$`).
 
 #### 5.4 Entity Validation
 
