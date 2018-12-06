@@ -25,7 +25,7 @@ This document is licensed under Creative Commons CC BY 4.0. You are free to shar
 > Readers will be looking to ensure that they have an accurate understanding of any terminology used in the document.
 >
 > Example Wording
------------------
+> -----------------
 
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119 [RFC2119].
 
@@ -44,13 +44,13 @@ The following definitions are used in this document:
 ## 2. Introduction and Applicability
 
 > The introduction should briefly introduce the Metadata Registration Practice Statement and describe the document publication process.  It is important to remember that you may wish to change and update your Metadata Registration Practice Statement over time. If these changes are significant, it will mean that you will be publishing metadata that has been processed against different practice statements and as such it is important that is represented both in the documentation and in the metadata (see section 5). Previous editions of the MRPS should continue to be published to support referencing of these changes.
-
+> 
 > If you provide the document in multiple languages this should be referenced here, indicating which version is normative.
-
+> 
 > Readers will be looking to understand where you publish documentation, how you reflect changes and how this relates to published metadata.
-
+> 
 > Example Wording
------------------
+> -----------------
 
 This document describes the metadata registration practices of the Federation Operator with effect from the publication date shown on the cover sheet. All new entity registrations performed on or after that date SHALL be processed as described here until the document is superseded.
 
@@ -61,11 +61,11 @@ An entity that does not include a reference to a registration policy MUST be ass
 ## 3. Member Eligibility and Ownership
 
 > This section should describe the process by which the Federation establishes member eligibility. HOW members join is probably already documented in the Federation Policy, and this can be referenced here. The MRPS should provide more detail about WHAT the Federation does to manage and restrict membership.
-
+> 
 > Readers will be looking to understand how organisations become members of your Federation, how you carry out any specific checks on these organisations and whether you permit any exceptions to these processes, such as outsourcing arrangements.
-
+> 
 > Example Wording
------------------
+> -----------------
 
 Members of the Federation are eligible to make use of the Federation Operator’s registry to register entities. Registration requests from other sources SHALL NOT be accepted.
 
@@ -80,9 +80,9 @@ The process also establishes a canonical name for the Federation member.  The ca
 ## 4. Metadata Format
 
 > This section should refer to the way in which registration information is referenced in the entity metadata. For the purposes of this document, use of the SAML V2.0 Metadata Extensions for Registration and Publication Information is assumed [SAML-Metadata-RPI-V1.0].
-
+> 
 > Example Wording
------------------
+> -----------------
 
 Metadata for all entities registered by the Federation Operator SHALL make use of the [SAML-Metadata-RPI-V1.0] metadata extension to indicate that the Federation Operator is the registrar for the entity and to detail the version of the MRPS statement that applies to the entity. The following is a non-normative example:
 
@@ -99,11 +99,11 @@ Metadata for all entities registered by the Federation Operator SHALL make use o
 ## 5. Entity Eligibility and Validation
 
 > This section describes the processes and checks put in place before an entity is registered. Readers will be looking to understand how you determine a member’s right to publish information about a given entity and any checks you make to ensure the entity metadata is well constructed.
-
+> 
 > Text regarding entityIDs using URIs is included below. Some Federations will also permit URN-based entityIDs. You should describe what you do and do not permit under each schema. Please ensure that any processes described here reflect your current practice and any published documentation currently available for your Federation.
-
+> 
 > Example Wording
------------------
+> -----------------
 
 #### 5.1 Entity Registration
 
@@ -128,7 +128,7 @@ http-scheme and https-scheme URIs used for entityID values MUST contain a host p
 
 For Identity Provider entities, scopes MUST be rooted in the DNS domain name space, expressed in lowercase. Multiple scopes are allowed.
 
-Regular expressions representing multiple scopes can be used, but all DNS domains covered by the expression SHALL be included in checks by the Federation Operator for the member's right to use those domains. For these checks to be achievable by the Federation Operator, the set of DNS domains covered by the regular expression MUST end with a domain under a public suffix - that is, a literal ‘.’, followed by at least two DNS labels separated by literal ’.’s (representing a domain to be validated as "owned" by the entity owner), and ending with a ’$’ anchor (e.g. `(foo|bar)\.example\.com$`).
+Regular expressions representing multiple scopes MAY be used, but all DNS domains covered by the expression SHALL be included in checks by the Federation Operator for the member's right to use those domains. For these checks to be achievable by the Federation Operator, the set of DNS domains covered by the regular expression MUST end with a domain under a public suffix - that is, a literal '.', followed by at least two DNS labels separated by literal '.'s (representing a domain to be validated as "owned" by the entity owner), and ending with a '$' anchor (e.g. `(foo|bar)\.example\.com$`).
 
 #### 5.4 Entity Validation
 
@@ -142,11 +142,11 @@ These checks include:
 ## 6. Entity Management
 
 > This section describes the processes undertaken once an entity has been registered – including processes for change requests, removal and any intervention the Federation Operator may take. If you have a Monitoring Practice Statement, this is likely to be referenced here. The reader will want to understand that any changes made to an entity are completed with the correct permission and for good reasons. Please ensure that any processes described here reflect your current practice and any published documentation currently available for your Federation.
-
+> 
 > If you have multiple different roles under the Registered Representative category (e.g. management contacts, technical contacts, administrative contacts) the different rights of these roles can be detailed here.
-
+> 
 > Example Wording
------------------
+> -----------------
 
 Once a member has joined the Federation any number of entities MAY be added, modified or removed by the organisation.
 
