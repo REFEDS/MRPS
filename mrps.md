@@ -109,13 +109,6 @@ Metadata for all entities registered by the Federation Operator SHALL make use o
 
 The process by which a Federation member can register an entity is described at: ``<url>`` .
 
-The Federation Operator SHALL verify the member’s right to use particular domain names in relation to entityID attributes and, for Identity Provider entities, any scope elements.
-
-The right to use a domain name SHALL be established in one of the following ways:
-
-* A member’s canonical name matches registrant information shown in WHOIS.
-* A member MAY be granted the right to make use of a specific domain name through a permission letter from the domain owner on a per-entity basis. Permission SHALL NOT be regarded as including permission for the use of sub-domains.
-
 #### 5.2 EntityID Format
 
 Values of the entityID attribute registered MUST be an absolute URI using the http, https or urn schemes.
@@ -124,9 +117,21 @@ https-scheme URIs are RECOMMENDED to all members.
 
 http-scheme and https-scheme URIs used for entityID values MUST contain a host part whose value is a DNS domain.
 
+The right to use a URI in an entityID SHOULD be established in one of the following ways:
+
+* A Member demonstrates the right to use the host part of a URL by means of domain validation [[#5.5](#55-domain-validation)].
+* In the case of third-party or cloud-hosted solution **all** of the following apply:-
+  1. The format of an entityID is well-known and contains a unique identifier for each specific Tenant. Such an identifier could be contained within the path or query subcomponents of a URL, or as a unique subdomain of the domain name identified in the host subcomponent;
+  2. There is reasonable certainty that the unique identifier for a Tenant is both persistent and is not reassigned; and
+  3. The Tenant's unique identifier can be directly associated with the member in one of the following ways:
+     * The solution provider has a lookup or API service that returns either the canonical name of the Member or a domain name the Member has the right to use; or
+     * A Registered Representative of the Member attests to the Member’s right to use the entityID; and can demonstrate operational control of the Tenant by means of login to a protected resource that displays both the Tenant’s unique identifier from the entityID, as well as the canonical name of the Member or a domain name the Member has the right to use.
+
 #### 5.3 Scope Format
 
 For Identity Provider entities, scopes MUST be rooted in the DNS domain name space, expressed in lowercase. Multiple scopes are allowed.
+
+The right to use a particular scope SHALL be established by means of domain validation [[#5.5](#55-domain-validation)].
 
 Regular expressions representing multiple scopes MAY be used, but all DNS domains covered by the expression SHALL be included in checks by the Federation Operator for the member's right to use those domains. For these checks to be achievable by the Federation Operator, the set of DNS domains covered by the regular expression MUST end with a domain under a public suffix - that is, a literal '.', followed by at least two DNS labels separated by literal '.'s (representing a domain to be validated as "owned" by the entity owner), and ending with a '$' anchor (e.g. `(foo|bar)\.example\.com$`).
 
@@ -138,6 +143,15 @@ These checks include:
 *	Ensuring all required information is present in the metadata;
 *	Ensuring metadata is correctly formatted;
 *	Ensuring protocol endpoints are properly protected with TLS / SSL certificates.
+
+#### 5.5 Domain Validation
+
+Where required the Federation Operator SHALL establish a Members’s right to use a domain name in one of the following ways:
+
+* A Members’s canonical name matches the registrant information shown in public WHOIS records held by the corresponding DNS registrar;
+* A DNS registrar confirms the Members’s eligibility from privately-held information; or
+* A Registered Representative of the Member attests to the Member’s right to use the domain name; and can demonstrate operational control of the domain name by completing Domain Control Validation [DCV] using any of the mechanisms commonly accepted by public certification authorities.
+* A Member MAY be granted the right to make use of a specific domain name through a permission letter from the domain owner on a per-entity basis. Permission SHALL NOT be regarded as including permission for the use of sub-domains.
 
 ## 6. Entity Management
 
@@ -172,6 +186,7 @@ Changes will be communicated to Registered Representatives for the entity.
 * [RFC2119] Bradner, S., "Key words for use in RFCs to Indicate Requirement Levels", BCP 14, RFC 2119, March 1997.
 * [SAML-Metadata-RPI-V1.0]  SAML V2.0 Metadata Extensions for Registration and Publication Information Version 1.0. 03 April 2012. OASIS Committee Specification 01. http://docs.oasis-open.org/security/saml/Post2.0/saml-metadata-rpi/v1.0/cs01/saml-metadata-rpi-v1.0-cs01.html.
 * [SAML-Metadata-OS] OASIS Metadata for the OASIS Security Assertion Markup Language (SAML) V2.0: http://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf.
+* [DCV] "Validation of Domain Authorization or Control" in "Baseline Requirements for the Issuance and Management of Publicly‐Trusted Certificates", CA/Browser Forum.  https://cabforum.org/baseline-requirements-documents/.
 
 [REFEDS Metadata Registration Practice Statement template]: https://github.com/REFEDS/MRPS/
 [logo]: https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg "CC-BY"
