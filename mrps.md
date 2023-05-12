@@ -120,12 +120,12 @@ http-scheme and https-scheme URIs used for entityID values MUST contain a host p
 The right to use a URI in an entityID SHOULD be established in one of the following ways:
 
 * A Member demonstrates the right to use the host part of a URL by means of domain validation [[#5.5](#55-domain-validation)].
-* In the case of third-party or cloud-hosted solution **all** of the following apply:-
-  1. The format of an entityID is well-known and contains a unique identifier for each specific Tenant. Such an identifier could be contained within the path or query subcomponents of a URL, or as a unique subdomain of the domain name identified in the host subcomponent;
-  2. There is reasonable certainty that the unique identifier for a Tenant is both persistent and is not reassigned; and
-  3. The Tenant's unique identifier can be directly associated with the member in one of the following ways:
+* In the case of multi-tenanted providers, such as software-as-a-service or cloud-hosted solutions, **all** of the following apply:-
+  1. The format of an entityID is well-known and contains a unique identifier for each specific tenant. Such an identifier could be contained within the path or query subcomponents of a URL, or as a unique subdomain of the domain name identified in the host subcomponent;
+  2. There is reasonable certainty that the unique identifier for a tenant is both persistent and is not reassigned; and
+  3. The tenant's unique identifier can be directly associated with the Federation Member in one of the following ways:
      * The solution provider has a lookup or API service that returns either the canonical name of the Member or a domain name the Member has the right to use; or
-     * A Registered Representative of the Member attests to the Member’s right to use the entityID; and can demonstrate operational control of the Tenant by means of login to a protected resource that displays both the Tenant’s unique identifier from the entityID, as well as the canonical name of the Member or a domain name the Member has the right to use.
+     * A Registered Representative of the Member attests to the Member's right to use the entityID; and can demonstrate operational control of the tenant by means of login to a protected resource that displays both the tenant’s unique identifier from the entityID, as well as the canonical name of the Member or a domain name the Member has the right to use.
 
 #### 5.3 Scope Format
 
