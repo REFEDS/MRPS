@@ -100,7 +100,7 @@ Metadata for all entities registered by the Federation Operator SHALL make use o
 
 > This section describes the processes and checks put in place before an entity is registered. Readers will be looking to understand how you determine a member’s right to publish information about a given entity and any checks you make to ensure the entity metadata is well constructed.
 > 
-> Text regarding entityIDs using URIs is included below. Some Federations will also permit URN-based entityIDs, and so example wording applying to those is also provided. You should describe what you do and do not permit under each schema. Please ensure that any processes described here reflect your current practice and any published documentation currently available for your Federation.
+> Text regarding entityIDs using URIs is included below. While they tend to be discouraged, some Federations still permit URN-based entityIDs and may need to include additional wording to cover these cases. You should describe what you do and do not permit under each scheme. Please ensure that any processes described here reflect your current practice and any published documentation currently available for your Federation.
 > 
 > Example Wording
 > -----------------
@@ -117,8 +117,6 @@ https-scheme URIs are RECOMMENDED to all members.
 
 http-scheme and https-scheme URIs used for entityID values MUST contain a host part whose value is a DNS domain.
 
-The use of urn-scheme URIs for entityID values is NOT RECOMMENDED but MAY be permitted in exceptional circumstances. When permitted, such values MUST be part of a formal namespace registered in terms of [RFC8141]. The Federation Operator MAY further constrain the available urn-scheme namespaces to specific namespace identifier (NID) prefixes.
-
 The right to use a URI in an entityID SHOULD be established in one of the following ways:
 
 * A Member demonstrates the right to use the host part of a URL by means of domain validation [[#5.5](#55-domain-validation)].
@@ -128,7 +126,6 @@ The right to use a URI in an entityID SHOULD be established in one of the follow
   3. The Tenant's unique identifier can be directly associated with the member in one of the following ways:
      * The solution provider has a lookup or API service that returns either the canonical name of the Member or a domain name the Member has the right to use; or
      * A Registered Representative of the Member attests to the Member’s right to use the entityID; and can demonstrate operational control of the Tenant by means of login to a protected resource that displays both the Tenant’s unique identifier from the entityID, as well as the canonical name of the Member or a domain name the Member has the right to use.
-* A Registered Representative of the Member demonstrates that the specific namespace-specific string value of a urn-scheme URI is part of a properly-delegated registry and has been issued to the Member for their use.
 
 #### 5.3 Scope Format
 
@@ -190,7 +187,6 @@ Changes will be communicated to Registered Representatives for the entity.
 * [SAML-Metadata-RPI-V1.0]  SAML V2.0 Metadata Extensions for Registration and Publication Information Version 1.0. 03 April 2012. OASIS Committee Specification 01. http://docs.oasis-open.org/security/saml/Post2.0/saml-metadata-rpi/v1.0/cs01/saml-metadata-rpi-v1.0-cs01.html.
 * [SAML-Metadata-OS] OASIS Metadata for the OASIS Security Assertion Markup Language (SAML) V2.0: http://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf.
 * [DCV] "Validation of Domain Authorization or Control" in "Baseline Requirements for the Issuance and Management of Publicly‐Trusted Certificates", CA/Browser Forum.  https://cabforum.org/baseline-requirements-documents/.
-* [RFC8141] Saint-Andre, P. & Klensin, J., "Uniform Resource Names (URNs)", RFC 8141, ISSN 2070-1721, April 2017.
 
 [REFEDS Metadata Registration Practice Statement template]: https://github.com/REFEDS/MRPS/
 [logo]: https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg "CC-BY"
