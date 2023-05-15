@@ -111,7 +111,7 @@ The process by which a Federation member can register an entity is described at:
 
 #### 5.2 EntityID Format
 
-Values of the entityID attribute registered MUST be an absolute URI using the http, https or urn schemes.
+Values of the entityID attribute registered MUST be an absolute URI using the http or https schemes.
 
 https-scheme URIs are RECOMMENDED to all members.
 
