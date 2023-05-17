@@ -140,9 +140,9 @@ Regular expressions representing multiple scopes MAY be used, but all DNS domain
 On entity registration, the Federation Operator SHALL carry out entity validation checks.
 These checks include:
 
-*	Ensuring all required information is present in the metadata;
-*	Ensuring metadata is correctly formatted;
-*	Ensuring protocol endpoints are protected with TLS / SSL certificates. Where a private certificate authority is used, the Federation Operator MAY ask the Registered Representative to confirm that the trust anchor is reasonably likely to be embedded into the browsers of all users of the Entity.
+* Ensuring all required information is present in the metadata;
+* Ensuring metadata is correctly formatted;
+* Ensuring protocol endpoints are protected with TLS / SSL certificates. Where a private certificate authority is used, the Federation Operator MAY ask the Registered Representative to confirm that the trust anchor is reasonably likely to be embedded into the browsers of all users of the Entity.
 
 #### 5.5 Domain Validation
 
@@ -174,10 +174,10 @@ Communication of change happens via **_e-mail, Federation registry tool, etc._**
 
 The Federation Operator may amend or modify the Federation metadata at any time in order to:
 
-*	Ensure the security and integrity of the metadata;
-*	Comply with interFederation agreements;
-*	Improve interoperability;
-*	Add value to the metadata.
+* Ensure the security and integrity of the metadata;
+* Comply with interFederation agreements;
+* Improve interoperability;
+* Add value to the metadata.
 
 Changes will be communicated to Registered Representatives for the entity.
 
