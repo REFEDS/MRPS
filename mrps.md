@@ -142,7 +142,7 @@ These checks include:
 
 *	Ensuring all required information is present in the metadata;
 *	Ensuring metadata is correctly formatted;
-*	Ensuring protocol endpoints are properly protected with TLS / SSL certificates.
+*	Ensuring protocol endpoints are protected with TLS / SSL certificates. Where a private certificate authority is used, the Federation Operator MAY ask the Registered Representative to confirm that the trust anchor is reasonably likely to be embedded into the browsers of all users of the Entity.
 
 #### 5.5 Domain Validation
 
